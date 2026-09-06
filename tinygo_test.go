@@ -7,7 +7,7 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/tinywasm/tinygo"
+	"webtyp.com/tinygo"
 )
 
 func TestTinygoWasmExecJS(t *testing.T) {

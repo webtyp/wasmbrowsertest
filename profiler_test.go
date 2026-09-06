@@ -6,7 +6,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/tinywasm/devbrowser/cdproto/profiler"
+	"webtyp.com/devbrowser/cdproto/profiler"
 )
 
 func TestWriteProfile(t *testing.T) {

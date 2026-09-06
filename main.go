@@ -15,12 +15,12 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/tinywasm/devbrowser"
-	"github.com/tinywasm/devbrowser/cdproto/inspector"
-	"github.com/tinywasm/devbrowser/cdproto/profiler"
-	cdpruntime "github.com/tinywasm/devbrowser/cdproto/runtime"
-	"github.com/tinywasm/devbrowser/cdproto/target"
-	"github.com/tinywasm/devbrowser/chromedp"
+	"webtyp.com/devbrowser"
+	"webtyp.com/devbrowser/cdproto/inspector"
+	"webtyp.com/devbrowser/cdproto/profiler"
+	cdpruntime "webtyp.com/devbrowser/cdproto/runtime"
+	"webtyp.com/devbrowser/cdproto/target"
+	"webtyp.com/devbrowser/chromedp"
 )
 
 func main() {

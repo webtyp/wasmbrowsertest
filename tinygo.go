@@ -7,7 +7,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/tinywasm/tinygo"
+	"webtyp.com/tinygo"
 )
 
 // tinygoWasmExecLocation is the shim's path relative to TINYGOROOT.
@@ -74,7 +74,7 @@ func tinygoBin() (string, error) {
 	bin, err := tinygo.GetPath()
 	if err != nil {
 		return "", fmt.Errorf("tinygo is not installed: %w\n"+
-			"install it with: go run github.com/tinywasm/tinygo/cmd/tinygoinstall@latest", err)
+			"install it with: go run webtyp.com/tinygo/cmd/tinygoinstall@latest", err)
 	}
 	return bin, nil
 }

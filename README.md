@@ -1,4 +1,4 @@
-# wasmbrowsertest [![Build Status](https://github.com/tinywasm/wasmbrowsertest/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/tinywasm/wasmbrowsertest/actions/workflows/ci.yml)
+# wasmbrowsertest [![Build Status](https://github.com/webtyp/wasmbrowsertest/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/webtyp/wasmbrowsertest/actions/workflows/ci.yml)
 <img src="docs/img/badges.svg">
 
 Run Go wasm tests easily in your browser.
@@ -12,7 +12,7 @@ This tool automates all of that. So you just have to type `GOOS=js GOARCH=wasm g
 
 ## Quickstart
 
-- `go install github.com/tinywasm/wasmbrowsertest@latest`. This will place the binary in $GOPATH/bin, or $GOBIN, if that has a different value.
+- `go install webtyp.com/wasmbrowsertest@latest`. This will place the binary in $GOPATH/bin, or $GOBIN, if that has a different value.
 - Rename the binary to `go_js_wasm_exec`.
 - Add $GOBIN to $PATH if it is not already done.
 - Run tests as usual: `GOOS=js GOARCH=wasm go test`.
@@ -67,7 +67,7 @@ addons:
   chrome: stable
 
 install:
-- go install github.com/tinywasm/wasmbrowsertest@latest
+- go install webtyp.com/wasmbrowsertest@latest
 - mv $GOPATH/bin/wasmbrowsertest $GOPATH/bin/go_js_wasm_exec
 - export PATH=$GOPATH/bin:$PATH
 ```
@@ -100,7 +100,7 @@ jobs:
     - name: Install chrome
       uses: browser-actions/setup-chrome@latest
     - name: Install dep
-      run: go install github.com/tinywasm/wasmbrowsertest@latest
+      run: go install webtyp.com/wasmbrowsertest@latest
     - name: Setup wasmexec
       run: mv $(go env GOPATH)/bin/wasmbrowsertest $(go env GOPATH)/bin/go_js_wasm_exec
     - name: Checkout code
@@ -155,7 +155,7 @@ go test -cover ./...
 ```
 The new commands should be the following:
 ```bash
-go install github.com/tinywasm/wasmbrowsertest/cmd/cleanenv@latest
+go install webtyp.com/wasmbrowsertest/cmd/cleanenv@latest
 
 export GOOS=js GOARCH=wasm
 cleanenv -remove-prefix GITHUB_ -- go test -cover ./...
@@ -166,4 +166,4 @@ The `-remove-prefix` flag can be repeated multiple times to remove even more env
 
 ## Credits
 
-This project is a fork of [agnivade/wasmbrowsertest](https://github.com/agnivade/wasmbrowsertest), originally created by [Agniva De Sarker](https://github.com/agnivade). All credit for the original design and implementation goes to the upstream project; this fork adapts it for the tinywasm ecosystem (see [devbrowser](https://github.com/tinywasm/devbrowser) for the underlying browser automation).
+This project is a fork of [agnivade/wasmbrowsertest](https://github.com/agnivade/wasmbrowsertest), originally created by [Agniva De Sarker](https://github.com/agnivade). All credit for the original design and implementation goes to the upstream project; this fork adapts it for the webtyp ecosystem (see [devbrowser](https://github.com/webtyp/devbrowser) for the underlying browser automation).
