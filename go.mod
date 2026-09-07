@@ -18,7 +18,7 @@ require (
 	webtyp.com/json v0.5.25 // indirect
 	webtyp.com/mcp v0.2.21 // indirect
 	webtyp.com/model v0.1.8 // indirect
-	webtyp.com/router v0.1.34 // indirect
+	webtyp.com/router v0.1.35 // indirect
 	webtyp.com/screenshot v0.0.2 // indirect
 	webtyp.com/time v0.5.5 // indirect
 	webtyp.com/unixid v0.2.28 // indirect
