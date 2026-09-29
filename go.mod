@@ -5,7 +5,7 @@ go 1.25.2
 require (
 	github.com/go-interpreter/wagon v0.6.0
 	github.com/google/pprof v0.0.0-20240727154555-813a5fbdbec8
-	webtyp.com/devbrowser v0.5.21
+	webtyp.com/devbrowser v0.5.22
 	webtyp.com/tinygo v1.0.1
 )
 
