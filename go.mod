@@ -15,7 +15,7 @@ require (
 	webtyp.com/context v0.0.23 // indirect
 	webtyp.com/fetch v0.1.28 // indirect
 	webtyp.com/fmt v1.0.0 // indirect
-	webtyp.com/json v0.5.25 // indirect
+	webtyp.com/json v0.5.27 // indirect
 	webtyp.com/mcp v0.2.39 // indirect
 	webtyp.com/model v0.2.0 // indirect
 	webtyp.com/router v0.3.0 // indirect
