@@ -5,7 +5,7 @@ go 1.26.8
 require (
 	github.com/go-interpreter/wagon v0.6.0
 	github.com/google/pprof v0.0.0-20240727154555-813a5fbdbec8
-	webtyp.com/devbrowser v0.6.1
+	webtyp.com/devbrowser v0.6.2
 	webtyp.com/tinygo v1.0.1
 )
 
@@ -18,6 +18,7 @@ require (
 	webtyp.com/filepath v0.1.0 // indirect
 	webtyp.com/fmt v1.0.0 // indirect
 	webtyp.com/json v0.5.29 // indirect
+	webtyp.com/lang v0.1.3 // indirect
 	webtyp.com/mcp v0.2.40 // indirect
 	webtyp.com/model v0.2.2 // indirect
 	webtyp.com/router v0.3.2 // indirect
