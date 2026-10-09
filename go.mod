@@ -24,5 +24,5 @@ require (
 	webtyp.com/router v0.3.2 // indirect
 	webtyp.com/screenshot v0.0.2 // indirect
 	webtyp.com/time v0.5.7 // indirect
-	webtyp.com/unixid v0.2.28 // indirect
+	webtyp.com/unixid v0.3.0 // indirect
 )
