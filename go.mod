@@ -20,7 +20,7 @@ require (
 	webtyp.com/json v0.5.29 // indirect
 	webtyp.com/lang v0.1.6 // indirect
 	webtyp.com/mcp v0.3.0 // indirect
-	webtyp.com/model v0.2.2 // indirect
+	webtyp.com/model v0.2.3 // indirect
 	webtyp.com/router v0.4.2 // indirect
 	webtyp.com/screenshot v0.0.2 // indirect
 	webtyp.com/time v0.5.7 // indirect
