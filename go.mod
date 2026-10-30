@@ -22,7 +22,7 @@ require (
 	webtyp.com/lang v0.1.10 // indirect
 	webtyp.com/mcp v0.3.4 // indirect
 	webtyp.com/model v0.2.12 // indirect
-	webtyp.com/router v0.4.16 // indirect
+	webtyp.com/router v0.4.17 // indirect
 	webtyp.com/screenshot v0.0.2 // indirect
 	webtyp.com/time v0.6.2 // indirect
 	webtyp.com/unixid v0.3.1 // indirect
