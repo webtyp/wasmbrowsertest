@@ -16,10 +16,10 @@ require (
 	webtyp.com/context v0.0.23 // indirect
 	webtyp.com/escape v0.1.0 // indirect
 	webtyp.com/fetch v0.1.29 // indirect
-	webtyp.com/filepath v0.1.0 // indirect
-	webtyp.com/fmt v1.0.0 // indirect
+	webtyp.com/filepath v0.1.3 // indirect
+	webtyp.com/fmt v1.0.2 // indirect
 	webtyp.com/json v0.5.40 // indirect
-	webtyp.com/lang v0.1.16 // indirect
+	webtyp.com/lang v0.1.22 // indirect
 	webtyp.com/mcp v0.3.4 // indirect
 	webtyp.com/model v0.2.12 // indirect
 	webtyp.com/router v0.4.17 // indirect
