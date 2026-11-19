@@ -4,7 +4,6 @@ import (
 	"bytes"
 	"os"
 	"path/filepath"
-	"runtime"
 	"testing"
 
 	"webtyp.com/tinygo"
@@ -26,8 +25,12 @@ func TestTinygoWasmExecJS(t *testing.T) {
 	// The whole point of -tinygo: TinyGo's glue is a different file from the Go
 	// toolchain's. If these ever match, serving either one would work and the
 	// flag would be pointless — so a match means the resolution is wrong.
+	root, err := goRoot()
+	if err != nil {
+		t.Fatalf("goRoot failed: %v", err)
+	}
 	for _, loc := range wasmLocations {
-		goShim, err := os.ReadFile(filepath.Join(runtime.GOROOT(), loc))
+		goShim, err := os.ReadFile(filepath.Join(root, loc))
 		if err != nil {
 			continue
 		}

@@ -26,14 +26,6 @@ func (cf *ConsoleFilter) Add(input string) {
 	// Split input by newlines to ensure we handle line-by-line filtering
 	lines := strings.Split(input, "\n")
 	for _, line := range lines {
-		// allow empty lines?
-		if line == "" {
-			// Check if we should preserve empty lines or not.
-			// console logs usually imply newline at end of each call,
-			// but Split might give empty string at end.
-			// Let's preserve for fidelity but filtering logic ignores empty lines usually.
-			// continue
-		}
 		cf.addLine(line)
 	}
 }

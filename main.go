@@ -148,7 +148,7 @@ func run(ctx context.Context, args []string, errOutput io.Writer, flagSet *flag.
 
 	ext := path.Ext(wasmFile)
 	if ext == ".test" {
-		newWasmFile := strings.Replace(wasmFile, ext, ".wasm", -1)
+		newWasmFile := strings.ReplaceAll(wasmFile, ext, ".wasm")
 		err := copyFile(wasmFile, newWasmFile)
 		if err != nil {
 			return err

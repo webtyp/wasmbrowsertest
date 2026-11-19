@@ -35,7 +35,7 @@ func gentleParse(flagset *flag.FlagSet, args []string) ([]string, error) {
 		if err := flagset.Parse(next); err != nil {
 			if strings.HasPrefix(err.Error(), prefix) {
 				pull := strings.TrimPrefix(err.Error(), prefix)
-				for next[0] != pull && !(strings.HasPrefix(next[0], pull) && strings.HasPrefix(next[0], pull+"=")) {
+				for next[0] != pull && !strings.HasPrefix(next[0], pull+"=") {
 					next = next[1:]
 					if len(next) == 0 {
 						panic("odd: pull not found: " + pull)

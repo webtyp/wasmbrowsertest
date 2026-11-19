@@ -12,7 +12,6 @@ import (
 	"net/http"
 	"os"
 	"path/filepath"
-	"runtime"
 	"strconv"
 	"strings"
 	"time"
@@ -78,9 +77,13 @@ func NewWASMServer(wasmFile string, args []string, coverageFile string, tinygoMo
 		return srv, nil
 	}
 
+	root, err := goRoot()
+	if err != nil {
+		return nil, err
+	}
 	var buf []byte
 	for _, loc := range wasmLocations {
-		buf, err = os.ReadFile(filepath.Join(runtime.GOROOT(), loc))
+		buf, err = os.ReadFile(filepath.Join(root, loc))
 		if err == nil {
 			break
 		}
@@ -92,7 +95,7 @@ func NewWASMServer(wasmFile string, args []string, coverageFile string, tinygoMo
 		var perr *os.PathError
 		if errors.As(err, &perr) {
 			if strings.Contains(perr.Path, filepath.Join("golang.org", "toolchain")) {
-				return nil, fmt.Errorf("The Go toolchain does not include the WebAssembly exec helper before Go 1.24. Please copy wasm_exec.js to %s", filepath.Join(runtime.GOROOT(), "misc", "wasm", "wasm_exec.js"))
+				return nil, fmt.Errorf("The Go toolchain does not include the WebAssembly exec helper before Go 1.24. Please copy wasm_exec.js to %s", filepath.Join(root, "misc", "wasm", "wasm_exec.js"))
 			}
 		}
 		return nil, err
